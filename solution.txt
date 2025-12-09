@@ -1,2 +1,9 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+Solution Explanation:
+I used a nested loop to generate all consecutive substrings.
+The outer loop chooses a starting position.
+The inner loop chooses the ending position and slices the substring.
+This ensures the substrings are consecutive and in the correct order.
+
+Time Complexity:
+The algorithm runs in O(n^2) time.
+This is because for every starting index we loop through all remaining characters.
