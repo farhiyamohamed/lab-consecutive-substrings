@@ -1,9 +1,10 @@
-Solution Explanation:
-I used a nested loop to generate all consecutive substrings.
-The outer loop chooses a starting position.
-The inner loop chooses the ending position and slices the substring.
-This ensures the substrings are consecutive and in the correct order.
+Solution Description:
+The solution uses nested loops to generate all consecutive substrings of a given string. 
+The outer loop selects the starting index, and the inner loop selects the ending index. 
+Each substring is extracted using str.slice() and stored in an array. 
 
 Time Complexity:
-The algorithm runs in O(n^2) time.
-This is because for every starting index we loop through all remaining characters.
+O(n^2) - the number of substrings grows quadratically with string length.
+
+Space Complexity:
+O(n^2) - for storing all substrings in an array.

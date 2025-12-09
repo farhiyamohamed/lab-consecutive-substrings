@@ -1,17 +1,13 @@
 /**
- * getConsecutiveSubstrings(str)
- * Returns an array of all consecutive substrings (length >= 1)
- * in the order they appear.
- *
- * Example: 'abc' => ['a','ab','abc','b','bc','c']
+ * Function: getConsecutiveSubstrings
+ * Description: Returns all consecutive substrings of a given string
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n^2)
  */
-
 function getConsecutiveSubstrings(str) {
   const result = [];
 
-  // Loop through starting positions
   for (let i = 0; i < str.length; i++) {
-    // Loop through ending positions
     for (let j = i + 1; j <= str.length; j++) {
       result.push(str.slice(i, j));
     }
@@ -20,4 +16,7 @@ function getConsecutiveSubstrings(str) {
   return result;
 }
 
-module.exports = getConsecutiveSubstrings;
+// Example test cases
+console.log(getConsecutiveSubstrings("abc")); // ["a","ab","abc","b","bc","c"]
+console.log(getConsecutiveSubstrings("a"));   // ["a"]
+console.log(getConsecutiveSubstrings(""));    // []
